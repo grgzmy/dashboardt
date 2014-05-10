@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "steelfish";
+    src: url("steelfish.ttf");
+}
+
+.appbody{
+	font-family: "steelfish";
+	color: #f06E57;
+	background-color: #3d3d3d;
+}
+
+.footer{
+	position: absolute;
+	bottom:0;
+	width:98%;
+	height: 80px;
+	margin: 15px 15px 15px 15px;
+}
+
+.footer .logo{
+	font-size: 72px;
+}
+
+.logo .glyphicon {
+	font-size: 25px;
+}
+
+.clock{
+	font-size: 200px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.city{
+	font-size: 40px;
+	text-align: center;
+	margin-top: 15px;
+}
+

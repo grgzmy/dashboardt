@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="dashboardt">
+<head>
+  <meta charset="utf-8">
+  <title>DASHBOARDT</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.css"/>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+  <script src="scripts/app.js"></script> 
+
+</head>
+<body class = "appbody" ng-controller="boardtCtrl">
+  <div class="clock">
+    {{getTime()}}
+  </div>
+
+  <!-- <div class="loading" ng-show="loading">
+    <img src="/assets/loading.png"/>
+  </div> -->
+
+  <div> <!-- ng-show="!loading"> -->
+    <div class="city">
+      {{location.city}}, {{location.state}}
+    <div>
+
+    <div class = "row">
+      <div class = "col-lg-4 col-lg-offset-4"> <!-- third of grid, in the center -->
+        <div class = "col-lg-4"> 
+          <div class="row icon">{{icons[weather[0].icon]}}</div> 
+          <div class="row"> {{weather[0].high[unit]}}° / {{weather[0].low[unit]}}° {{unit==="celsius" ? "C" : "F"}}  </div> 
+          <div class="row day">{{weather[0].date.weekday}}</div>
+        </div>
+        <div class = "col-lg-4"> 
+          <div class="row icon">{{icons[weather[1].icon]}}</div> 
+          <div class="row"> {{weather[1].high[unit]}}° / {{weather[1].low[unit]}}° {{unit==="celsius" ? "C" : "F"}}  </div> 
+          <div class="row day">{{weather[1].date.weekday}}</div>
+        </div>
+        <div class = "col-lg-4"> 
+          <div class="row icon">{{icons[weather[2].icon]}}</div> 
+          <div class="row"> {{weather[2].high[unit]}}° / {{weather[2].low[unit]}}° {{unit==="celsius" ? "C" : "F"}}  </div> 
+          <div class="row day">{{weather[2].date.weekday}}</div>
+        </div>
+      </div> <!-- col4 offset4 -->
+    </div> <!-- weather row -->
+  
+
+    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="settings modal-dialog">
+        <div class="modal-content" style="background-color: #3d3d3d">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="settingsTitle">DASHBOARDT SETTINGS</h4>
+          </div> <!-- modal-header -->
+          <div class="modal-body">
+            <form>
+              Weather Unit
+              <input type="radio" ng-model="unit" value="fahrenheit"> F </input>
+              <input type="radio" ng-model="unit" value="celsius"> C </input>
+            </form>
+          </div> <!-- modal-body -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-settings-modal" data-dismiss="modal">CLOSE</button>
+          </div> <!-- modal-footer -->
+        </div> <!-- modal content -->
+      </div> <!-- modal dialog -->
+    </div> <!-- modal -->
+  </div> <!-- not while loading -->
+
+  <div class = "footer">
+    <div class="logo pull-right">
+      <span class = "glyphicon glyphicon-cog settingsBtn" data-toggle="modal" href="#settingsModal"></span>
+      DASHBOARDT
+    </div> <!-- logo --> 
+  </div> <!-- footer -->
+
+
+</body>
+</html>

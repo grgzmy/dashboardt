@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "steelfish";
+    src: url("steelfish.ttf");
+}
+
+@font-face{
+	font-family: "icons";
+	src: url("icons.otf");
+}
+
+.appbody{
+	font-family: "steelfish";
+	color: #f06E57;
+	background-color: #3d3d3d;
+}
+
+.footer{
+	position: absolute;
+	bottom:0;
+	width:98%;
+	height: 80px;
+	margin: 15px 15px 15px 15px;
+}
+
+.footer .logo{
+	font-size: 72px;
+}
+
+.logo .glyphicon {
+	font-size: 25px;
+}
+
+.clock{
+	font-size: 200px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.city{
+	font-size: 35px;
+	text-align: center;
+}
+
+.icon{
+	font-size: 90px;
+	color: #AFAFAF;
+	font-family: "icons";
+}
+
+.loading{
+	text-align: center;
+}
+
+.day{
+	font-size: 25px;
+}
+
+.settingsBtn{
+	cursor: pointer;
+}
+
+.btn-boardt{
+  color: #333;
+  background-color: #f06E57;
+  border-color: #ccc;
+}
+
+.btn-settings-modal{
+	color: #f06e57;
+	border: 2px solid !important ;
+	border-color: #f06e57;
+	background-color: transparent;
+}
+
+ .btn-settings-modal .modal-btn-txt : hover {
+	color: #f06e57 !important ;
+	border-color: #f06e57 !important; 
+}
+.modal{
+	background-color: #c0c0c0;
+}
+
+#settingsTitle{
+	font-size: 30px;
+}
+
+.settings {
+	font-size: 22px;
+}
